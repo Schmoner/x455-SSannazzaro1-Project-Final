@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {color: white;background-color: black;}
+      @media screen and (max-width: 500px) {.flex-container>div {width: 45%;}}
+      @media screen and (max-width: 750px) {.flex-container>div {width: 30%;}}
+      @media (max-width: 768px) {.w3-modal-content {width: 500px;}.w3-modal {padding-top: 50px;}}
+      @media (min-width: 993px) {.w3-modal-content {width: 900px;}.w3-hide-large {display: none !important;}.w3-sidebar.w3-collapse {display: block !important;}}
+      @media (max-width: 992px) and (min-width: 601px) {.w3-hide-medium {display: none !important;}}
+      @media (max-width: 992px) {.w3-sidebar.w3-collapse {display: none;}}
+     </style>
+    <title>Ten Foot Tiger</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width initial-scale=1  @media">
+      <link rel="stylesheet" href="W3Edited.css">
+      <script
+      type="text/JavaScript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/JavaScript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"
+    ></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+    </head>
+<body>
+
+<!-- Header NavBar-->
+<header class="sticky-box1 h2 border w3-center w3-top float" style="width:100%; background-color: white; position:fixed;">
+  <img class="w3-left border" style="height: 145px;" src="./TFT_Logo.jpg"> <i class="w3-right fa fa-shopping-cart border" style="font-size:91px; color:black;padding:22px;"></i>
+    <h1 style="color: Black;">Ten Foot Tiger</h1>
+  <div class="w3-center h2" style="width:100%; color: black; background-color: white; border: 5px solid orange;">
+    <i class="w3-left fa fa-bars margin1 w3-hover-text-orange"></i>
+  <a
+    href="javascript:void(0)"
+    class="w3-bar-item w3-button w3-center w3-hide-small"
+    onclick="w3_open()">
+  </a>
+      <a href="#about" class="w3-bar-item w3-button w3-hover-text-orange w3-hide-small" >About</a>
+      <a href="#events" class="w3-bar-item w3-button w3-hover-text-orange w3-hide-small">Events</a>
+      <a href="#music" class="w3-bar-item w3-button w3-hover-text-orange w3-hide-small">Music</a>
+      <a href="#photos" class="w3-bar-item w3-button w3-hover-text-orange w3-hide-small">Photos</a>
+      <a href="#videos" class="w3-bar-item w3-button w3-hover-text-orange w3-hide-small">Videos</a>
+      <a href="#merch" class="w3-bar-item w3-button w3-hover-text-orange w3-hide-small">Merch</a>
+      <!--<a href="#search" class="w3-bar-item w3-button w3-hover-text-orange">Search</a>-->
+     <a><i class="w3-right fa fa-search margin1 w3-hover-text-orange" style="font-size:25px"></i></a>
+  </div>
+</header>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-animate-left w3-center border w3-hide-large" style="font-size:20px; display:box; width:200px; height:350px; color: black; background-color: white;" id="mySidebar">
+  <a 
+      href="javascript:void(0)" 
+      onclick="w3_close()"
+      class="w3-bar-item w3-button w3-large w3-padding-16">Close &times;</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+    <a href="#events" onclick="w3_close()" class="w3-bar-item w3-button">Events</a>
+    <a href="#music" onclick="w3_close()" class="w3-bar-item w3-button">Music</a>
+    <a href="#photos" onclick="w3_close()" class="w3-bar-item w3-button">Photos</a>
+    <a href="#videos" onclick="w3_close()" class="w3-bar-item w3-button">Videos</a>
+    <a href="#merch" onclick="w3_close()" class="w3-bar-item w3-button">Merch</a>
+</nav>
+
+  <!-- Background Image / About-->
+<div id="about" class="w3-container border">
+    <img class="w3-image padding3" style="width:100%;" alt="Ten Foot Tiger Band" src="./TFT Press Pic - Color.jpg"/>
+      <div class="w3-col l12 w3-padding-large w3-left" style="width:100%;margin-top:20px; margin-bottom: 20px; color: black; background-color: white; border: 5px solid orange;">
+        <p class="flex-container padding" style="color: Black">Ten Foot Tiger is a Sacramento based collective of musicians driven solely by the desire to create stirring original music. With a sound beyond traditional categories, TFT serves up a wide variety that highlights funk, jazz, latin, pop, ballads, blues, electronic, rock and folk. There truly is a little something for everyone. You can expect poignant and provocative songs paired with powerful improvisations that stem from the many genres they cover. One thing that’s unmistakable about a Ten Foot Tiger performance is the exhilarating, high energy they deliver that makes this band a must see act for any music lover.</p>
+      </div>
+</div>
+
+  
+<!-- Events Section -->
+<div id="events" class="w3-container w3-row w3-center w3-padding-large border">
+  <h1 class="w3-center" style="color: white">Events</h1><br>
+    <div class="w3-col l6 flex-container">
+      <h4 class="center padding">Upcoming Events</h4>
+        <p class="left-align" style="color: black; background-color: white; padding: 20px; border: 5px solid orange;">
+          <img src="./TFT 2.png" width="300px" class="w3-right float-right " style="padding: 10px;"/> 
+          <br>Friday April 11 <br>Placerville @ 9pm</br>
+          <br>Saturday April 12 <br>Elements, South Lake Tahoe @ 9pm</br>
+          <br> Sunday May 4 <br>Himmel Haus </br>
+          <br>Friday May 16 <br>Golden Road Gathering, Placerville @10pm</br>
+          <br>June 20-22 Davis Music Fest, Davis</br>
+          <br></br>
+          <br>Next shows to be announced in the near future, check in for updates!</br>
+        </p>
+    </div>
+    <div class="w3-col l6 flex-container">
+      <h4 class="padding">Past Events</h4>
+        <p class="right-align" style="color: black; background-color: white; padding: 20px; border: 5px solid orange;">
+          <img src="./Reel 1.png" width="300px" class="w3-left float-right" style="padding: 10px;"/>
+            Ten Foot Tiger has played at various venues and festivals around California and Nevada including: 
+            <br></br>
+            <br>Golden Road Gathering Festival - Placerville
+            <br>High Sierra Music Festival - Quincy
+            <br>For The Funk Of It - Belden
+            <br>Divided Sky - Meyers
+            <br>Himmel Haus - Stateline
+            <br>Elements  &  Whiskey Dicks - South Lake Tahoe
+            <br>Torch Club  &  Harlows  &  Starlight Room  &  Big Sexy Brewery - Sacramento
+            <br>Hopmonk Brewery - Sebastapol
+            <br>Berryessa Brewery - Winters
+            <br>Crazy Horse - Nevada City
+            <br>Lost on Main - Chico
+            <br>The Cypress - Reno
+            <br>Alpine Meadows - Truckee
+            <br>And more! Follow Ten Foot Tiger on Facebook or Instagram for their schedule of events. See you at the next show! </p><br>  
+    </div>
+</div>
+      
+ 
+
+
+  <!-- Music Section -->
+<div id="music" class="text-center padding border">
+    <h1>Music</h1><br>
+      <div class="flex-container" style="padding-bottom: 50px"> 
+        <div class="border padding h3"><h3 class="w3-left" style="padding: 20px;">Purchase <br>Music</h2>  
+          <br><a href="https://www.apple.com/us/search/ten-foot-tiger?src=globalnav" title="apple_music" target="_blank"class="w3-hover-text-orange">Apple Music</a></br> 
+        </div>
+          <div class="border padding">
+        <h3 class="text-center h3">Original Music</h2>
+          <ul class="left-align scrolling padding2">
+            <li>Estoy Esperando</li>
+            <li>Victims of the Groove</li>
+            <li>Sh!t Rain</li>
+            <li>Admissions of Guilt</li>
+            <li>Frying Pan</li>
+            <li>Be Major</li>
+            <li>Green Lemonade</li>
+            <li>Addicted to Escape</li>
+            <li>Neverending Daydream</li>
+            <li>The Coal Miner</li>
+            <li>Death Beach</li>
+            <li>Miles Away</li>
+            <li>Beautiful Dilemma</li>
+          </ul>
+      </div>
+        <div class="border padding h3"><h3 class="w3-right" style="padding: 20px;">Listen to<br> Music</br></h2>
+          <br><a href="https://open.spotify.com/artist/5lXLHTcHNqWMuGChgReIp1" title="spotify" target="_blank"class="w3-hover-text-orange">Spotify</a></br>
+        </div>
+      </div>
+</div>
+  
+    <!-- Photo Section -->
+  <div id="photos" class="center border w3-padding-large" >
+    <h1 class="text-center padding">Photos</h1><br>
+      <div class="center padding2" style="width:100%;">
+        <img class="mySlides" src="./Reel 3.png" alt="Bassist Mike band photo" style="width:100%; display:none;">
+        <img class="mySlides" src="./Reel 4.png" alt="Singer Guitarist Dan band photo" style="width:100%; display:none;">
+        <img class="mySlides" src="./Reel 5.png" alt="Drummer Billy band photo" style="width:100%; display:none;">
+        <img class="mySlides" src="./Reel 6.png" alt="Ten Foot Tiger band photo" style="width:100%; display:none;">
+        <img class="mySlides" src="./Reel 7.png" alt="Ten Foot Tiger band photo" style="width:100%; display:none;">
+        <img class="mySlides" src="./Reel 9.png" alt="Ten Foot Tiger band photo" style="width:100%; display:none;">
+      </div>
+      <br>
+    <div class="center w3-col s1 flex-container" style="width:16.66%;">
+        <img class="w3-opacity w3-hover-opacity-off" src="./Reel 3.png" style="padding-left: 20px; padding-right: 20px; width:100%; cursor: pointer" onclick="currentDiv(1)"/>
+        <img class="w3-opacity w3-hover-opacity-off" src="./Reel 4.png" style="padding-left: 20px; padding-right: 20px; width:100%; cursor: pointer" onclick="currentDiv(2)"/>
+        <img class="w3-opacity w3-hover-opacity-off" src="./Reel 5.png" style="padding-left: 20px; padding-right: 20px; width:100%; cursor: pointer" onclick="currentDiv(3)"/>
+        <img class="w3-opacity w3-hover-opacity-off" src="./Reel 6.png" style="padding-left: 20px; padding-right: 20px; width:100%; cursor: pointer" onclick="currentDiv(4)"/>
+        <img class="w3-opacity w3-hover-opacity-off" src="./Reel 7.png" style="padding-left: 20px; padding-right: 20px; width:100%; cursor: pointer" onclick="currentDiv(5)"/>
+        <img class="w3-opacity w3-hover-opacity-off" src="./Reel 9.png" style="padding-left: 20px; padding-right: 20px; width:100%; cursor: pointer" onclick="currentDiv(6)"/>
+    </div>
+
+<!--Lightbox Images-->
+    <div class="center flex-container padding3" style="width:100%;">
+      <img class="side-margin padding2 style1 w3-hover-shadow" src="./TFT Band 1.png" 
+        style="cursor: zoom-in"
+        onclick="document.getElementById('modal01').style.display='block'">
+      <img class="side-margin padding2 style1 w3-hover-shadow" src="./TFT Band 2.png"
+        style="cursor: zoom-in"
+        onclick="document.getElementById('modal02').style.display='block'">
+      <img class="side-margin padding2 style1 w3-hover-shadow" src="./TFT Band 3.png"
+        style="cursor: zoom-in"
+        onclick="document.getElementById('modal03').style.display='block'">
+    </div>
+
+    <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+      <span style="cursor: pointer">&times;</span>
+        <div class="w3-modal-content w3-animate-zoom" style="padding-top: 15px; font-size: 40px; color: black; background-color: white;">
+          <h4 class="w3-center">Dan Green</h4>
+            <img src="./TFT Band 1 L.png" style="width:100%;"/>
+        </div>
+    </div>
+
+    <div id="modal02" class="w3-modal" onclick="this.style.display='none'">
+      <span style="cursor: pointer">&times;</span>
+        <div class="w3-modal-content w3-animate-zoom" style="padding-top: 15px; font-size: 40px; color: black; background-color: white;">
+          <h4 class="w3-center">Mike Palmer</h4>
+            <img src="./TFT Band 2 L.png" style="width:100%;"/>
+        </div>
+    </div>
+    
+    <div id="modal03" class="w3-modal" onclick="this.style.display='none'">
+      <span style="cursor: pointer">&times;</span>
+        <div class="w3-modal-content w3-animate-zoom" style="padding-top: 15px; font-size: 40px; color: black; background-color: white;">
+          <h4 class="w3-center">Billy Thompson</h4>
+            <img src="./TFT Band 3 L.png" style="width:100%;"/>
+        </div>
+  </div>
+  
+<!--Accordian Text-->
+  <div class="flex-container w3-row" style="width:100%;"> 
+      <div class="w3-center padding style1">
+        <button onclick="myAccordion('accordion1')" class="w3-button w3-block w3-orange w3-center-align" id="accordionBtn1">
+          <h4 class="padding side-margin text-center" style="width:33%;">Dan Green<br>Guitar<i class="fa fa-caret-down"></i></h4> 
+        </button>
+          <div
+              id="accordion1"
+              class="w3-hide w3-container"
+              style="height: 260px">
+            <p> Dan Green has been a guitarist for over 20 years. His first band, Saturn Rising, began in South Lake Tahoe. He continued to play with Waiting For Tim, Adient Zoo, and Black Star Safari before creating Ten Foot Tiger. </p>
+          </div>
+      </div>
+    
+      <div class="w3-center padding style1">
+        <button onclick="myAccordion('accordion2')" class="w3-button w3-block w3-orange w3-center-align" id="accordionBtn2">
+          <h4 class="padding side-margin text-center" style="width:33%;">Mike Palmer<br>Bass<i class="fa fa-caret-down"></i></h4> 
+        </button>
+          <div
+              id="accordion2"
+              class="w3-hide w3-container"
+              style="height: 260px">
+            <p> Mike has been playing bass in the Sacramento music scene for decades. His other bands in the area include The Nibblers, Mubmo Gumbo, and more. </p>
+          </div>
+    </div>    
+    
+      <div class="w3-center padding style1">
+        <button onclick="myAccordion('accordion3')" class="w3-button w3-block w3-orange w3-center-align" id="accordionBtn3">
+          <h4 class="padding side-margin text-center" style="width:33%;">Billy Thompson<br>Drums<i class="fa fa-caret-down"></i></h4> 
+        </button>
+          <div
+              id="accordion3"
+              class="w3-hide w3-container"
+              style="height: 260px">
+            <p> Billy is a Sacramento drummer with over 10 years of experience in the local music scene. His other bands include a The Gold Soulds, Boot Juice, and more. </p>
+          </div>
+    </div> 
+  </div>
+
+    <div class="flex-container w3-row" style="width:100%;">
+          <img class="side-margin padding2 style1 w3-hover-shadow" src="./TFT Band 4.png" 
+              style="cursor: zoom-in"
+              onclick="document.getElementById('modal04').style.display='block'">
+          <img class="side-margin padding2 style1 w3-hover-shadow" src="./TFT Band 5.png" 
+              style="cursor: zoom-in"
+              onclick="document.getElementById('modal05').style.display='block'">
+          <img class="side-margin padding2 style1 w3-hover-shadow" src="./TFT Band 6.png" 
+              style="cursor: zoom-in"
+              onclick="document.getElementById('modal06').style.display='block'">
+    </div>
+
+    <div id="modal04" class="w3-modal" onclick="this.style.display='none'">
+      <span style="cursor: pointer">&times;</span>
+        <div class="w3-modal-content w3-animate-zoom" style="padding-top: 15px; font-size: 40px; color: black; background-color: white;">
+          <h4 class="w3-center">Alex Aguis</h4>
+            <img src="./TFT Band 4 L.png" style="width:100%;"/>
+        </div>
+    </div>
+
+    <div id="modal05" class="w3-modal" onclick="this.style.display='none'">
+      <span style="cursor: pointer">&times;</span>
+        <div class="w3-modal-content w3-animate-zoom" style="padding-top: 15px; font-size: 40px; color: black; background-color: white;">
+          <h4 class="w3-center">Staton Jones</h4>
+            <img src="./TFT Band 5 L.png" style="width:100%;"/>
+        </div>
+    </div>
+    
+    <div id="modal06" class="w3-modal" onclick="this.style.display='none'">
+      <span style="cursor: pointer">&times;</span>
+        <div class="w3-modal-content w3-animate-zoom" style="padding-top: 15px; font-size: 40px; color: black; background-color: white;">
+          <h4 class="w3-center">Allen Gamboa</h4>
+            <img src="./TFT Band 6 L.png" style="width:100%;"/>
+        </div>
+  </div> 
+</div>
+
+  
+
+<!-- Video Section -->
+<div id="videos" class="w3-container text-center w3-padding-large border">
+    <h1>Videos</h1><br>
+    <div class="center padding2" style="width:100%;">
+      <p class="h3 padding2">Green Lemonade</p>
+      <iframe width="600" height="400" src="https://www.youtube.com/embed/AtD6Rw8MOCQ?si=6C5s8bk1CwOvo25C" title="Ten Foot Tiger Green Lemonade Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="center padding2" style="width:100%;">
+      <p class="h3 padding2">Addicted To Escape</p>
+      <iframe width="600" height="400" src="https://www.youtube.com/embed/S1MhPIgnNEo?si=RjGIdmzDYMx87wLa" title="Ten Foot Tiger Addicted to Escape Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe>
+    </div>
+    <div class="center padding2" style="width:100%;">
+      <p class="h3 padding2">Estoy Esperando</p>
+      <iframe width="600" height="400" src="https://www.youtube.com/embed/Q-APTkkeJ_8?si=OGzKiy453k73tUqP" title="Ten Foot Tiger Estoy Esperando Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="padding-bottom: 50px;"></iframe>
+    </div>
+</div>
+  
+
+           <!-- Merch Section -->
+    <div id="merch" class="text-center padding-large border" style="width:100%;">
+        <h1>Merch</h1>
+        <table id="myTable" class="center padding-large">
+          <thead>
+              <th class="w3-hover-text-orange h2 border table padding" style="color: black; background-color: white"> Clothes</th>
+              <th class="w3-hover-text-orange h2 border table padding" style="color: black; background-color: white">Style</th>
+              <th class="w3-hover-text-orange h2 border table padding" style="color: black; background-color: white">Stickers</th>
+              <th class="w3-hover-text-orange h2 border table padding" style="color: black; background-color: white">Size</th>
+          </thead>
+          <tr>
+              <td class="w3-hover-text-orange h3 border table padding" style="color: black; background-color: white">T-Shirts</td>
+              <td class="w3-hover-text-orange h3 border table padding" style="color: black; background-color: white">Tiger Face</td>
+              <td class="w3-hover-text-orange h3 border table padding" style="color: black; background-color: white">Logo</td>
+              <td class="w3-hover-text-orange h3 border table padding" style="color: black; background-color: white">Small</td>
+          </tr>
+          <tr>
+              <td class="w3-hover-text-orange h3 border table padding" style="color: black; background-color: white">Sweatshirts</td>
+              <td class="w3-hover-text-orange h3 border table padding" style="color: black; background-color: white">Rainbow</td>
+              <td class="w3-hover-text-orange h3 border table padding" style="color: black; background-color: white">TFT</td>
+              <td class="w3-hover-text-orange h3 border table padding" style="color: black; background-color: white">Medium</td>
+          </tr>
+          <tr>
+            <td class="w3-hover-text-orange h3 border table padding" style="color: black; background-color: white">Tank Tops</td>
+            <td class="w3-hover-text-orange h3 border table padding" style="color: black; background-color: white">Black & White</td>
+            <td class="w3-hover-text-orang h3 border table padding" style="color: black; background-color: white">Tigerpillar</td>
+            <td class="w3-hover-text-orange h3 border table padding" style="color: black; background-color: white">Large</td>
+        </tr>
+      </table>
+    </div>
+<!-- End page content -->
+
+
+<!-- Footer -->
+<footer class="w3-center sticky-box2 h3"style="padding:10px; color: black; background-color: white; border: 5px solid orange;">
+  <a href="https://www.instagram.com/tenfoottiger/" title="instagram" class="w3-hover-text-orange">Instagram</a>
+  <a href="https://www.facebook.com/tenfoottiger/" title="facebook" class="w3-hover-text-orange">Facebook</a>
+  <a href="https://www.youtube.com/@tenfoottiger" title="youtube" class="w3-hover-text-orange">Youtube</a>
+  ©2025 Ten Foot Tiger
+  <a href="https://www.apple.com/us/search/ten-foot-tiger?src=globalnav" title="apple_music" class="w3-hover-text-orange">Apple Music</a>
+  <a href="https://open.spotify.com/artist/5lXLHTcHNqWMuGChgReIp1" title="spotify" class="w3-hover-text-orange">Spotify</a>
+  <a href="https://tunetrax.com/ten-foot-tiger/video" title="tunetrax" class="w3-hover-text-orange">TuneTrax</a>
+</footer>
+
+<script>
+  var mySidebar = document.getElementById("mySidebar");
+ 
+  function w3_open() {
+    if (mySidebar.style.display === "block") {mySidebar.style.display = "none";} 
+    else {mySidebar.style.display = "block";}}
+ </script>
+ 
+ <script>
+    function w3_close() {mySidebar.style.display = "none";}
+ </script>
+
+<script>
+  var myIndex = 0;
+      carousel();
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1;
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 5000); // Change image every 5 seconds
+      }
+
+      function currentDiv(n) {
+        showDivs((slideIndex = n));
+        myIndex = n;
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-opacity-off";
+      }
+
+        $(document).ready(function () {
+        $("table#myTable").tablesorter({
+          sortList: [
+            [2, 1],
+          ] /* 1st number - column to sort, 2nd number - asending (2) or descending order (1) */,
+          CssAsc: "tablesorter-headerAsc",
+          CssDesc: "tablesorter-headerDesc",
+        });
+      });
+
+      function myAccordion(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+          x.previousElementSibling.className =
+            x.previousElementSibling.className.replace("w3-orange", "w3-deep-orange");
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+          x.previousElementSibling.className =
+            x.previousElementSibling.className.replace("w3-deep-orange", "w3-orange");
+        }
+      }
+</script>
+
+</body>
+</html>
